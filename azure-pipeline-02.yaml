@@ -1,0 +1,8 @@
+variables:
+- template: variables/variables.yml # template reference
+pool:
+  vmImage: ${{ variables/variables.yml }}
+steps:
+
+- script: build x ${{ variables.arch }} ${{ variables.config }}
+
